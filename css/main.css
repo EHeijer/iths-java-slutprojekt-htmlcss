@@ -1,0 +1,129 @@
+html {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff; }
+
+body {
+  background: #e9e4e4;
+  margin: 30px 10px;
+  line-height: 1.4; }
+
+.btn {
+  background-color: #ba3838;
+  padding: 0.6rem 1.3rem;
+  text-decoration: none;
+  border: 0;
+  color: #fff; }
+
+img {
+  max-width: 100%; }
+
+.wrapper {
+  display: grid;
+  gap: 20px; }
+
+nav ul {
+  display: grid;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: 1fr; }
+
+nav a {
+  background: #ba3838;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 1.1rem;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8); }
+
+nav a:hover {
+  background: #fff;
+  color: #ba3838; }
+
+.top-container {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: "header" "side-a" "side-b"; }
+
+header {
+  background-image: url(../img/header-picture.jpg);
+  grid-area: header;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8); }
+
+.aside-box {
+  background: #fff;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  color: #ba3838;
+  padding: 1.5rem 0.5rem;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  text-align: center; }
+  .aside-box h4 {
+    font-size: 2rem;
+    margin: 0; }
+  .aside-box p {
+    font-weight: bold; }
+  .aside-box .aside-box-a {
+    grid-area: side-a; }
+  .aside-box .aside-box-b {
+    grid-area: side-b; }
+
+.icon-boxes {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+  .icon-boxes .box {
+    background: #ba3838;
+    text-align: center;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8); }
+
+.picture-with-text {
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  display: grid;
+  gap: 20px;
+  padding: 2rem;
+  grid-template-columns: 1fr; }
+  .picture-with-text h2 {
+    font-size: 2rem;
+    color: #ba3838; }
+  .picture-with-text p {
+    color: #ba3838;
+    font-weight: bold; }
+
+.gallery {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+  .gallery img {
+    width: 100%;
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8); }
+
+footer {
+  background: #ba3838;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem; }
+
+@media screen and (min-width: 550px) and (max-width: 700px) {
+  .top-container {
+    grid-template-areas: "header header" "side-a side-b"; } }
+
+@media screen and (min-width: 750px) {
+  body {
+    margin: 30px 40px; }
+  .top-container {
+    grid-template-areas: "header header side-a" "header header side-b"; }
+    .top-container header {
+      padding: 0 14rem; }
+  nav ul {
+    grid-template-columns: repeat(4, 1fr); } }

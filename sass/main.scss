@@ -1,0 +1,196 @@
+$primary-color: #ba3838;
+$white-color: #fff;
+$shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+
+@mixin flex-center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin grid-center {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: $white-color;
+}
+
+body {
+    background: rgb(233, 228, 228);
+    margin: 30px 10px;
+    line-height: 1.4;
+}
+
+.btn {
+    background-color: $primary-color;
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+    border: 0;
+    color: $white-color;
+}
+
+img {
+    max-width: 100%;
+}
+
+.wrapper {
+    display: grid;
+    gap: 20px;
+}
+
+nav {
+    ul {
+        display: grid;
+        gap: 20px;
+        padding: 0;
+        list-style: none;
+        grid-template-columns: 1fr;
+    }
+    a{
+        background: $primary-color;
+        color: $white-color;
+        text-decoration: none;
+        display: block;
+        padding: 0.8rem;
+        text-align: center;
+        font-size: 1.1rem;
+        box-shadow: $shadow;
+    }
+    a:hover {
+        background: $white-color;
+        color: $primary-color;
+    }
+}
+
+.top-container {
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "header"
+    "side-a"
+    "side-b";
+}
+
+header {
+    background-image: url(../img/header-picture.jpg);
+    grid-area: header;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: $shadow;
+}
+
+.aside-box {
+    background: $white-color;
+    @include grid-center;
+    color: $primary-color;
+    padding: 1.5rem 0.5rem;
+    box-shadow: $shadow;
+    text-align: center;
+    h4 {
+        font-size: 2rem;
+        margin: 0;
+    }
+    p {
+        font-weight: bold;
+    }
+    .aside-box-a {
+        grid-area: side-a;
+    }
+    .aside-box-b {
+        grid-area: side-b;
+    }
+}
+
+.icon-boxes {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
+    .box {
+        background: $primary-color;
+        text-align: center;
+        padding: 1.5rem 2rem;
+        box-shadow: $shadow;
+    }
+}
+
+.picture-with-text {
+    background: $white-color;
+    box-shadow: $shadow;
+    display: grid;
+    gap: 20px;
+    padding: 2rem;
+    grid-template-columns: 1fr;
+
+    h2{
+        font-size: 2rem;
+        color: $primary-color;
+    }
+    p {
+        color: $primary-color;
+        font-weight: bold;
+    }
+}
+
+.gallery {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    img {
+        width: 100%;
+        box-shadow: $shadow;
+    }
+}
+
+footer {
+    background: $primary-color;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 550px) and (max-width: 700px) {
+    .top-container {
+        grid-template-areas: 
+        "header header"
+        "side-a side-b";
+    }
+}
+
+@media screen and (min-width: 750px) {
+
+    body {
+        margin: 30px 40px;
+    }
+    .top-container {
+        grid-template-areas: 
+        "header header side-a"
+        "header header side-b";
+        
+        header{
+            padding: 0 14rem;
+        }
+    }
+
+    nav {
+        ul {
+        grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+
+}
+
+
+
+
+
+
