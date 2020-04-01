@@ -4,8 +4,8 @@ html {
   color: #fff; }
 
 body {
-  background: #e9e4e4;
-  margin: 30px 10px;
+  background: #f3eded;
+  margin: 15px 10px;
   line-height: 1.4; }
 
 .btn {
@@ -51,7 +51,7 @@ nav a:hover {
 header {
   background-image: url(../img/header-picture.jpg);
   grid-area: header;
-  min-height: 400px;
+  min-height: 300px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -63,7 +63,7 @@ header {
   align-items: center;
   justify-items: center;
   color: #ba3838;
-  padding: 1.5rem 0.5rem;
+  padding: 1.5rem 0.3rem;
   box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
   text-align: center; }
   .aside-box h4 {
@@ -71,6 +71,8 @@ header {
     margin: 0; }
   .aside-box p {
     font-weight: bold; }
+  .aside-box a:hover {
+    transform: scale(1.1); }
   .aside-box .aside-box-a {
     grid-area: side-a; }
   .aside-box .aside-box-b {
@@ -79,20 +81,23 @@ header {
 .icon-boxes {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
+  grid-template-columns: 1fr;
+  max-width: 100%; }
   .icon-boxes .box {
-    background: #ba3838;
+    background: #fff;
     text-align: center;
     padding: 1.5rem 2rem;
-    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8); }
+    box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+    color: #ba3838; }
 
 .picture-with-text {
   background: #fff;
   box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
   display: grid;
-  gap: 20px;
+  gap: 30px;
   padding: 2rem;
-  grid-template-columns: 1fr; }
+  grid-template-columns: 1fr;
+  text-align: center; }
   .picture-with-text h2 {
     font-size: 2rem;
     color: #ba3838; }
@@ -111,19 +116,33 @@ header {
 footer {
   background: #ba3838;
   text-align: center;
-  padding: 1rem;
-  margin-top: 1rem; }
+  padding: 1rem; }
 
-@media screen and (min-width: 550px) and (max-width: 700px) {
+@media screen and (min-width: 550px) and (max-width: 800px) {
   .top-container {
     grid-template-areas: "header header" "side-a side-b"; } }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 801px) {
   body {
-    margin: 30px 40px; }
+    margin: 30px 50px; }
   .top-container {
-    grid-template-areas: "header header side-a" "header header side-b"; }
+    grid-template-areas: "header header header header side-a" "header header header header side-b";
+    margin-bottom: 1rem; }
     .top-container header {
-      padding: 0 14rem; }
+      padding: 0 15rem; }
+  .picture-with-text {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 1rem; } }
+
+@media screen and (min-width: 550px) and (max-width: 860px) {
+  .icon-boxes {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (min-width: 861px) {
+  .icon-boxes {
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 1rem; } }
+
+@media screen and (min-width: 550px) {
   nav ul {
     grid-template-columns: repeat(4, 1fr); } }
