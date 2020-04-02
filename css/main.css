@@ -122,6 +122,28 @@ footer {
   text-align: center;
   padding: .7rem; }
 
+.container {
+  display: grid; }
+
+.team {
+  text-align: center; }
+  .team h1 {
+    color: black; }
+  .team img {
+    width: 100%; }
+
+.players ul {
+  display: grid;
+  padding: 0;
+  list-style: none;
+  grid-template-columns: repeat(3, 1fr); }
+
+.players a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.1rem;
+  box-shadow: 0 1px 5px rgba(104, 104, 104, 0.8); }
+
 @media screen and (min-width: 550px) and (max-width: 800px) {
   .top-container {
     grid-template-areas: "header header" "side-a side-b"; } }

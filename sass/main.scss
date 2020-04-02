@@ -167,6 +167,39 @@ footer {
     padding: .7rem;
 }
 
+.container {
+    display: grid;
+}
+
+.team {
+    text-align: center;
+    h1 {
+        color: black;
+    }
+    img {
+        width: 100%;
+    }
+}
+
+.players {
+   
+
+    ul {
+        display: grid;
+        padding: 0;
+        list-style: none;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    a{
+        text-decoration: none;
+        
+        text-align: center;
+        font-size: 1.1rem;
+        box-shadow: $shadow;
+    }
+  
+}
+
 @media screen and (min-width: 550px) and (max-width: 800px) {
     .top-container {
         grid-template-areas: 
