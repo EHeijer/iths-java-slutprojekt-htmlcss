@@ -44,27 +44,62 @@ img {
     gap: 20px;
 }
 
-nav {
-    ul {
-        display: grid;
-        padding: 0;
-        list-style: none;
-        grid-template-columns: repeat(4, 1fr);
-        margin: 0;
+.phone-nav {
+
+    overflow: hidden;
+    background: $primary-color;
+    
+    .dropdown {
+        float: right;
+        overflow: hidden;
+        .dropbtn {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: $white-color;
+            background: inherit;
+            text-decoration: none;
+            border: none;
+            padding: 1rem 1rem;
+            margin: 0;
+        }
     }
-    a{
-        background: $primary-color;
-        color: $white-color;
-        text-decoration: none;
-        display: block;
-        padding: 0.5rem;
-        text-align: center;
-        font-size: 0.8rem;
-        box-shadow: $shadow;
-    }
-    a:hover {
+    .dropdown:hover .dropbtn, .dropdown:hover .menu-toggle{
         background: $white-color;
         color: $primary-color;
+    }
+    .menu-toggle {
+        color: $white-color;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background: $primary-color;
+        min-width: inherit;
+        box-shadow: $shadow;
+        z-index: 1;
+    }
+    .dropdown-content a {
+        float: none;
+        color: $white-color;
+        padding: 12px 18px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    .dropdown-content a:hover {
+        background: $white-color;
+        color: $primary-color;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    
+}
+
+.desktop-nav {
+    
+    ul {
+        display: none; 
     }
 }
 
@@ -249,9 +284,7 @@ footer {
 }
 
 @media screen and (min-width: 801px) {
-    body {
-        margin: 30px 50px;
-    }
+    
     .top-container {
         grid-template-areas: 
         "header header header header side-a"
@@ -283,15 +316,7 @@ footer {
             grid-template-columns: repeat(3, 1fr);
         }
     }
-    nav {
-        ul {
-            gap: 20px;
-        }
-        a{
-            padding: .8rem;
-            font-size: 1.2rem;
-        }
-    }
+    
 }
 
 @media screen and (min-width: 550px) and (max-width: 860px) {
@@ -301,9 +326,39 @@ footer {
 }
 
 @media screen and (min-width: 861px){
+    body {
+        margin: 30px 50px;
+    }
     .icon-boxes {
         grid-template-columns: repeat(4, 1fr);
         margin-bottom: 1rem;
+    }
+    .phone-nav {
+        display: none;
+    }
+    .desktop-nav {
+        ul {
+            display: grid;
+            gap: 20px;
+            padding: 0;
+            list-style: none;
+            grid-template-columns: repeat(4, 1fr);
+            margin: 0;
+        }
+        a{
+            background: $primary-color;
+            color: $white-color;
+            text-decoration: none;
+            display: block;
+            padding: .8rem;
+            text-align: center;
+            font-size: 1.2rem;
+            box-shadow: $shadow;
+        }
+        a:hover {
+            background: $white-color;
+            color: $primary-color;
+        }
     }
 }
 
@@ -327,9 +382,14 @@ footer {
         .aside-box {
             display: grid;
             margin: 0;
+            padding: 0;
+            h4 {
+                
+            }
         }
         .aside-box-a {
             grid-area: box-a;
+            
         }
         .aside-box-b {
             grid-area: box-b;

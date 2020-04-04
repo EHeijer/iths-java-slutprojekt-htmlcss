@@ -5,16 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liverpool FC</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/8f62a7fe7a.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <div class="wrapper">
-        <nav class="top-nav">
+        <nav class="desktop-nav">
             <ul>
                 <li><a href="#">HOME</a></li>
                 <li><a href="team.html">TEAM</a></li>
                 <li><a href="#">HISTORY</a></li>
                 <li><a href="#">CONTACT</a></li>
             </ul>
+        </nav>
+
+        <nav class="phone-nav">
+            <div class="dropdown">
+                <button class="dropbtn">MENU
+                    <i class="fas fa-bars menu-toggle"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="index.html">HOME</a>
+                    <a href="team.html">TEAM</a>
+                    <a href="#">HISTORY</a>
+                    <a href="#">CONTACT</a>
+                </div>
+            </div>
         </nav>
 
         <section class="top-container">
