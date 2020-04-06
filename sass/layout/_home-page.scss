@@ -1,0 +1,106 @@
+
+
+.wrapper {
+    display: grid;
+}
+.top-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: grid;
+    gap: 20px;
+    grid-template-areas: 
+    "header"
+    "side-a"
+    "side-b";
+}
+
+
+header {
+    margin: 10px 10px;
+    background-image: url(../img/header-picture.jpg);
+    grid-area: header;
+    min-height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: $shadow;
+}
+
+.aside-box {
+    margin: 0 10px;
+    background: $box-color;
+    @include grid-center;
+    color: $primary-color;
+    padding: 1.5rem .3rem;
+    box-shadow: $shadow;
+    text-align: center;
+    h4 {
+        font-size: 2rem;
+        margin: 0;
+    }
+    p {
+        font-weight: bold;
+        color: black;
+        
+    }
+    a:hover {
+        transform: scale(1.1);
+    }
+    .aside-box-a {
+        grid-area: side-a;
+    }
+    .aside-box-b {
+        grid-area: side-b;
+    }
+}
+
+.icon-boxes {
+    margin: 10px 10px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    .box {
+        background: $box-color;
+        text-align: center;
+        padding: 1rem 1rem;
+        box-shadow: $shadow;
+        color: $primary-color;
+    }
+
+    p{
+        color: black;
+        font-weight: bold;
+    }
+}
+
+.picture-with-text {
+    margin: 10px 10px;
+    background: $box-color;
+    box-shadow: $shadow;
+    display: grid;
+    gap: 20px;
+    padding: 1rem;
+    grid-template-columns: 1fr;
+    text-align: center;
+    h2{
+        font-size: 2rem;
+        color: $primary-color;
+    }
+    p {
+        color: black;
+        font-weight: bold;
+    }
+}
+
+.gallery {
+    margin: 10px 10px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    img {
+        width: 100%;
+        box-shadow: $shadow;
+    }
+}
