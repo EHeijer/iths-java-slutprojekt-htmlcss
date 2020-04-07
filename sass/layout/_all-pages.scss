@@ -101,7 +101,8 @@ footer {
         grid-template-areas:
         "h1 h1 h1 ." 
         "photo photo photo box-a"
-        "photo photo photo box-b";
+        "photo photo photo box-b"
+        "photo photo photo logo";
         h1{
             grid-area: h1;
             margin-top: 2rem;
@@ -116,7 +117,9 @@ footer {
             display: grid;
             margin: 0;
             padding: 0;
-           
+            h4 {
+                line-height: 1;
+            }
         }
         .aside-box-a {
             grid-area: box-a;
@@ -124,6 +127,17 @@ footer {
         }
         .aside-box-b {
             grid-area: box-b;
+        }
+        .logo {
+            grid-area: logo;
+            background: $white-color;
+            box-shadow: none;
+            padding: 4rem 0;
+            background-image: url(../img/lfc.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            
+            
         }
     }
 }

@@ -197,7 +197,7 @@ footer {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-areas: "h1 h1 h1 ."  "photo photo photo box-a" "photo photo photo box-b"; }
+    grid-template-areas: "h1 h1 h1 ."  "photo photo photo box-a" "photo photo photo box-b" "photo photo photo logo"; }
     .team h1 {
       grid-area: h1;
       margin-top: 2rem;
@@ -209,10 +209,20 @@ footer {
       display: grid;
       margin: 0;
       padding: 0; }
+      .team .aside-box h4 {
+        line-height: 1; }
     .team .aside-box-a {
       grid-area: box-a; }
     .team .aside-box-b {
-      grid-area: box-b; } }
+      grid-area: box-b; }
+    .team .logo {
+      grid-area: logo;
+      background: #fff;
+      box-shadow: none;
+      padding: 4rem 0;
+      background-image: url(../img/lfc.jpg);
+      background-repeat: no-repeat;
+      background-position: center; } }
 
 .btn {
   background-color: #ba3838;
