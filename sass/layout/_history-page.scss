@@ -1,0 +1,66 @@
+.history-container {
+    display: grid;
+    footer {
+        margin: 0;
+    }
+}
+
+.history-pic {
+    grid-area: pic;
+    margin: 0;
+    padding: 20px 0;
+    background: $box-color;
+    
+}
+
+.article {
+    grid-area: article;
+    margin:0;
+    background: $box-color;
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: 1fr;
+    text-align: center;
+    h2{
+        font-size: 2rem;
+        color: $primary-color;
+    }
+    p {
+        color: black;
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 1070px) {
+    .main-content {
+        display: grid;
+        gap: 20px;
+        grid-template-areas: 
+        "pic pic pic article";
+        margin: 0;
+        .history-pic {
+            padding: 1rem;
+            box-shadow: $shadow;
+            margin: 1rem 0;
+        }
+        .article {
+            box-shadow: $shadow;
+            margin: 1rem 0;
+            
+            h2 {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    
+    .article {
+        line-height: 2;
+      
+    }
+}
+
+
+
